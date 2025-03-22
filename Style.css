@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+body {
+  background-color: #000;
+  font-family: 'Geist', Georgia, 'Times New Roman', Times, serif;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.error-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  grid-template-rows: 0.1fr 1.6fr 0.7fr;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    ". ."
+    "error-message error-illustration"
+    ". .";
+  text-align: center;
+  height: 100%;
+}
+
+.error-message {
+  grid-area: error-message;
+  font-size: 52px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.error-illustration {
+  grid-area: error-illustration;
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.astronaut-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+.dust-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-button {
+  background: #000;
+  color: #fff;
+  width: 12rem;
+  height: 3rem;
+  font-size: auto;
+  font-weight: bold;
+  border-radius: 10px;
+  border-color: #fff;
+  border-width: 1px;
+  cursor: pointer;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+.home-button:hover {
+  background: #202020;
+}
+
+.error-title {
+  font-size: 80px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.error-subtitle {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0;
+}
+
+.error-description {
+  font-size: medium;
+  font-weight: 400;
+  color: #a1a1a1;
+}
+
+@media (max-width: 768px) {
+  .error-message {
+    font-size: 5vw;
+  }
+  
+  .error-illustration {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .astronaut-image {
+    width: 70%;
+  }
+
+  .home-button {
+    width: 9rem;
+    height: 2.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .error-title {
+    font-size: 7vw;
+  }
+
+  .error-subtitle {
+    font-size: 4vw;
+  }
+  
+  .error-description {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-message {
+    font-size: 6vw;
+  }
+
+  .error-illustration {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .astronaut-image {
+    width: 60%;
+  }
+
+  .home-button {
+    width: 8rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .error-title {
+    font-size: 8vw;
+  }
+
+  .error-subtitle {
+    font-size: 5vw;
+  }
+  
+  .error-description {
+    font-size: 4vw;
+  }
+}
