@@ -11,6 +11,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 0 20px;
 }
 
 .error-container {
@@ -28,6 +29,8 @@ body {
     ". .";
   text-align: center;
   height: 100%;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .error-message {
@@ -115,68 +118,84 @@ body {
   color: #a1a1a1;
 }
 
+/* Medium screens (tablets) */
 @media (max-width: 768px) {
+  .error-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "error-message"
+      "error-illustration"
+      ".";
+    padding: 20px;
+  }
+  
   .error-message {
-    font-size: 5vw;
+    font-size: 40px;
+    margin-bottom: 30px;
   }
   
   .error-illustration {
-    width: 25vw;
-    height: 25vw;
+    width: 300px;
+    height: 300px;
   }
-
-  .astronaut-image {
-    width: 70%;
-  }
-
+  
   .home-button {
-    width: 9rem;
-    height: 2.2rem;
+    width: 10rem;
+    height: 2.5rem;
     font-size: 0.9rem;
   }
   
   .error-title {
-    font-size: 7vw;
-  }
-
-  .error-subtitle {
-    font-size: 4vw;
+    font-size: 60px;
   }
   
-  .error-description {
-    font-size: 3vw;
+  .error-subtitle {
+    font-size: 28px;
   }
 }
 
+/* Small screens (mobile phones) */
 @media (max-width: 480px) {
+  .error-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "error-message"
+      "error-illustration"
+      ".";
+    padding: 15px;
+  }
+  
   .error-message {
-    font-size: 6vw;
+    font-size: 32px;
+    margin-bottom: 20px;
   }
-
+  
   .error-illustration {
-    width: 30vw;
-    height: 30vw;
+    width: 200px;
+    height: 200px;
   }
-
+  
   .astronaut-image {
-    width: 60%;
+    width: 100%;
   }
-
+  
   .home-button {
     width: 8rem;
     height: 2rem;
     font-size: 0.8rem;
   }
-
+  
   .error-title {
-    font-size: 8vw;
+    font-size: 36px;
   }
-
+  
   .error-subtitle {
-    font-size: 5vw;
+    font-size: 20px;
   }
   
   .error-description {
-    font-size: 4vw;
+    font-size: 14px;
   }
 }
